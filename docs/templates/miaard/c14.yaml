@@ -1,0 +1,76 @@
+---
+id: https://w3id.org/MIxS-MInAS/miaard
+name: miaard
+title: miaard
+description: |-
+  Minimum Information about any Radiocarbon Date
+license: MIT
+see_also:
+  - https://MIxS-MInAS.github.io/miaard
+
+prefixes:
+  c14: https://w3id.org/MIxS-MInAS/miaard/
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+default_prefix: c14
+default_range: string
+
+imports:
+  - linkml:types
+
+classes:
+  dh_interface:
+    name: dh_interface
+    description: A DataHarmonizer interface
+    from_schema: https://github.com/MIxS-MInAS/miaard/ # HERE CHANGE TO [schema name] URI
+  miaard:
+    name: miaard
+    description:  Minimum Information about a Radiocarbon Date 
+    is_a: dh_interface
+
+  RadiocarbonDate:
+    description: >-
+      A radiocarbon date measurement with associated metadata.
+    slots:
+      - lab_id
+      - conventional_age
+
+  RadiocarbonDateCollection:
+    tree_root: true
+    description: >-
+      A collection of radiocarbon dates measurement with associated metadata.
+    attributes:
+      entries:
+        description: A list of multiple radiocarbon date measurements.
+        range: RadiocarbonDate
+        multivalued: true
+        inlined_as_list: true
+
+slots:
+  lab_id:
+    title: Laboratory Identifier of Date Measurement
+    examples:
+      - value: "A 0034"
+      - value: "AA 12345"
+      - value: "Beta 987654"
+      - value: "CN-XX 1234"
+    description: |-
+      The unique identifier assigned to the radiocarbon date by the laboratory
+      that performed the measurement including the lab specific suffix.
+    slot_uri: c14:000001
+    multivalued: false
+    range: string
+    pattern: "^[A-Za-z-]+ [0-9]+$"
+    required: true
+  conventional_age:
+    title: Conventional Radiocarbon Age
+    examples:
+      - value: "4500"
+      - value: "12345"
+    description: |-
+      The conventional radiocarbon age in years BP (Before Present, where
+      Present is defined as AD 1950) as calculated by the laboratory.
+    slot_uri: c14:000002
+    multivalued: false
+    range: integer
+    required: true
