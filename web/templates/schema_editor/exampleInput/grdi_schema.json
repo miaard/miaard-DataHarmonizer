@@ -3,7 +3,7 @@
   "location": "/templates/schema_editor",
   "version": "1.0.0",
   "in_language": "en",
-  "Container": {
+  "container": {
     "Schemas": [
       {
         "Name": "GRDI",

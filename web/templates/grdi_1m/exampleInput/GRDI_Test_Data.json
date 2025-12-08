@@ -2,7 +2,7 @@
     "schema": "https://example.com/GRDI",
     "version": "8.9.8",
     "in_language": "en",
-    "Container": {
+    "container": {
         "GRDISamples": [
             {
                 "sample_collector_sample_id": "Sample 1",

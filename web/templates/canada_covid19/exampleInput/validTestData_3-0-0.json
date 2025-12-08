@@ -1,9 +1,8 @@
 {
   "schema": "https://example.com/CanCOGeN_Covid-19",
-  "location": "/templates/cancogen_covid19",
   "version": "3.0.0",
   "in_language": "en",
-  "Container": {
+  "container": {
     "CanCOGeNCovid19Data": [
       {
         "specimen_collector_sample_id": "AB-Lab_12345",
