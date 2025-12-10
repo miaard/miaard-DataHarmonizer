@@ -109,3 +109,6 @@ td.draggable-mapping-item {
   white-space: pre;
 }
 
+div.handsontableEditor.menu-above table.htCore {
+  position:fixed;
+}

@@ -1012,7 +1012,7 @@ slots:
     name: range
     title: Range
     any_of:
-      - range: SchemaTypeMenu
+      - range: SchemaSlotTypeMenu
       - range: SchemaClassMenu
       - range: SchemaEnumMenu
     required: true
