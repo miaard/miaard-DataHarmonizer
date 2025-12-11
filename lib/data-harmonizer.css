@@ -109,6 +109,7 @@ td.draggable-mapping-item {
   white-space: pre;
 }
 
-div.handsontableEditor.menu-above table.htCore {
-  position:fixed;
-}
+/* Styling for current open user picklist editor */
+div.handsontableEditor div .wtSpreader {width:auto}
+div.handsontableEditor table.htCore {}
+div.handsontableEditor.menu-above table.htCore {}
