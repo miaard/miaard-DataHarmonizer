@@ -117,10 +117,8 @@ div.handsontableEditor div .wtSpreader {
 div.handsontableEditor {}
 div.handsontableEditor.menu-above {
   background-color:lightgray; 
-  position:absolute; top:-243px
+  position:absolute; 
 }
-
-
 
 /* TESTING FOR WIDER DROPDOWN MENU WIDTH */
 .handsontable.listbox .ht_master table {
