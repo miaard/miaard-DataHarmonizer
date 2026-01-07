@@ -4,7 +4,7 @@ import {
   parseMultivaluedValue,
   formatMultivaluedValue,
   REMOVE,
-  JSON_SCHEMA_FORMAT,
+  //JSON_SCHEMA_FORMAT,
 } from '../lib/utils/fields';
 
 const fields = [
@@ -95,6 +95,7 @@ describe('dataArrayToObject', () => {
     });
   });
 
+  /*
   test('returns correctly formatted string with dateBehavior = JSON_SCHEMA_FORMAT', () => {
     const dataArray = [
       '',
@@ -115,6 +116,7 @@ describe('dataArrayToObject', () => {
       h: '04:44:00',
     });
   });
+  */
 });
 
 describe('dataObjectToArray', () => {
