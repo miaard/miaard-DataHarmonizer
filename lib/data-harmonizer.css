@@ -8,10 +8,6 @@
   background-color: lightblue;
 }
 
-#specify-headers-err-msg {
-  display: none;
-}
-
 #field-mapping-container {
   overflow-y: scroll;
   padding-bottom: 1rem;
