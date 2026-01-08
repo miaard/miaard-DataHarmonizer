@@ -985,6 +985,7 @@
                 <span data-i18n="field-mapping-mismatch"></span>: 
                 <strong><span id="field-mapping-data-file-name"></span></strong>.
                 <span data-i18n="field-mapping-explanation"></span>
+                <span data-i18n="field-mapping-json-note"></span>
               </div>
             </div>
             <div class="row my-3 border" id="field-mapping-comparison-row">
@@ -1026,9 +1027,9 @@
                   class="btn btn-primary"
                   style="float:right"
                   id="field-mapping-confirm-btn"
-                  data-i18n="field-mapping-complete"
+                  data-i18n="field-mapping-apply"
                 >
-                  Completed mapping
+                  Apply mapping
                 </button>
               </div>
             </div>
@@ -1038,35 +1039,40 @@
             <div class="row mt-3">
               <div class="col">
                 <b>Custom Mapping Library</b>
-                <select id="field-mapping-select" style="width:80%;height:35px">
+                <select id="field-mapping-select" style="width:100%;height:35px">
                   <option readonly value="" data-i18n="field-mapping-select-prompt">Apply a mapping profile</option>
                 </select>
+                <textarea id="field-mapping-display" data-i18n="field-mapping-textarea-placeholder" placeholder="The selected profile's mapping rules will be displayed here." style="width:100%; height:90px; white-space: pre; font-size:.8rem;margin-top:5px" readonly></textarea>
+
                 <button
                   type="button"
                   class="btn btn-secondary small"
+                  data-i18n="field-mapping-delete-btn"
                   id="field-mapping-delete-btn"
                   disabled
                 >
-                  Delete
-                </button> 
-
-                <input type = "text" id="field-mapping-name" placeholder="Name a profile to create (or overwrite)" size="32">
-                <button
-                  type="button"
-                  class="btn btn-secondary small"
-                  id="field-mapping-save-btn"
-                >
-                  Save
+                  Delete selected profile
                 </button> 
 
               </div>
-              <div class="col" style="padding:10px">
-                <textarea id="field-mapping-display" placeholder="The selected profile's mapping rules will be displayed here." style="width:100%; height:100%; white-space: pre; font-size:.8rem" readonly></textarea>
+              <div class="col" style="padding:5px">
+                <span data-i18n="field-mapping-library">
+                This library (stored in your browser's persistent memory) provides profiles containing customized field mappings from template fields to data file fields. <b>Load</b> a given profile into form above by selecting it from the menu. <b>Save</b> or <b>update</b> the above form mapping here: 
+              </span>
+                <input type = "text" id="field-mapping-name" data-i18n="field-mapping-name-placeholder" placeholder="Name a profile to create or update" size="28">
+                <button
+                  type="button"
+                  class="btn btn-secondary small"
+                  data-i18n="field-mapping-save-btn"
+                  id="field-mapping-save-btn"
+                >
+                  Save profile
+                </button> 
               </div>
             </div>
             <div class="row">
               <div class="col">
-                This library (stored in your browser's persistent memory) provides profiles containing customized field mappings from template fields to data file fields. <b>Load</b> a given profile into form above by selecting it from the menu. <b>Save</b> the above form mappings into a profile by providing a name and pressing "Save".
+                
               </div>
             </div>
           </div>

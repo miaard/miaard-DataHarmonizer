@@ -79,6 +79,35 @@
     "en": "Unmatched field(s) - shown in orange - might be remedied by dragging the appropriate data field to the matching template field row. Field ordering of matching fields (marked in yellow) is automatically handled. Not all schema fields need to be mapped (but key fields may be critical).",
     "fr": "Les champs non appariés (affichés en orange) peuvent être corrigés en faisant glisser le champ de données approprié vers la ligne du champ de modèle correspondant. L'ordre des champs correspondants (marqués en jaune) est géré automatiquement. Il n'est pas nécessaire de mapper tous les champs du schéma (mais certains champs clés peuvent être essentiels). "
   },
+ "field-mapping-json-note": {
+    "en": "In the case of a JSON data file that only contains fields with values, many other unmatched template fields may be displayed. These do not need to be matched.",
+    "fr": ""
+  },
+
+  "field-mapping-textarea-placeholder": {
+    "en": "The selected profile's mapping rules will be displayed here.",
+    "fr": "Les règles de mappage du profil sélectionné seront affichées ici."
+  },
+
+  "field-mapping-name-placeholder": {
+    "en": "Name a profile to create or update",
+    "fr": "Nommez un profil à créer ou à mettre à jour"
+  },
+
+  "field-mapping-save-btn": {
+    "en": "Save profile",
+    "fr": "Enregistrer le profil"
+  },
+
+  "field-mapping-delete-btn": {
+    "en": "Delete selected profile",
+    "fr": "Supprimer le profil sélectionné"
+  },
+
+  "field-mapping-library": {
+    "en": "This library (stored in your browser's persistent memory) provides profiles containing customized field mappings from data file fields to template fields. Load a given profile into form above by selecting it from the menu. Save or update the above form mapping here:",
+    "fr": "Cette bibliothèque (stockée dans la mémoire persistante de votre navigateur) fournit des profils contenant des correspondances personnalisées entre les champs du fichier de données et les champs du modèle. Chargez un profil donné dans le formulaire ci-dessus en le sélectionnant dans le menu. Enregistrez ou mettez à jour la correspondance du formulaire ci-dessus ici:"
+  },
 
   "field-mapping-template-field": {
     "en": "template field",
@@ -92,9 +121,9 @@
     "en": "Show concise form",
     "fr": "Afficher une forme concise"
   },
-  "field-mapping-complete": {
-    "en": "Completed mapping",
-    "fr": "Mappage terminé"
+  "field-mapping-apply": {
+    "en": "Apply mapping",
+    "fr": "Appliquer le mappage"
   },
 
   "settings-menu-button": {
