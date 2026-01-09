@@ -48,7 +48,7 @@ li.nav-item.disabled {
   padding: 2px;
   border-radius: 3px;
   border:1px solid green;
-  /* Position the tooltip text - see examples below! */
+  /* Position the tooltip text */
   position: absolute;
   margin: 0px !important;
   margin-bottom: 25px;
@@ -63,7 +63,7 @@ li.nav-item.disabled {
 }
 
 .tooltipy .tinytip {
-  
+    bottom:100%; /* IMPORTANT: Must keep tinytip away from tab click area */
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
