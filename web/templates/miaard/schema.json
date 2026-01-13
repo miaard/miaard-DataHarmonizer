@@ -1851,11 +1851,7 @@
       "range": "string",
       "required": true,
       "multivalued": false,
-      "structured_pattern": {
-        "syntax": "^{termID}$",
-        "interpolated": true,
-        "partial_match": false
-      }
+      "pattern": "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
     },
     "sample_taxon_id": {
       "name": "sample_taxon_id",
@@ -1881,11 +1877,7 @@
       "range": "string",
       "required": true,
       "multivalued": true,
-      "structured_pattern": {
-        "syntax": "^{termID}$",
-        "interpolated": true,
-        "partial_match": false
-      }
+      "pattern": "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
     },
     "sample_taxon_id_confidence": {
       "name": "sample_taxon_id_confidence",
@@ -1970,11 +1962,7 @@
       "required": false,
       "recommended": true,
       "multivalued": false,
-      "structured_pattern": {
-        "syntax": "^{termID}$",
-        "interpolated": true,
-        "partial_match": false
-      }
+      "pattern": "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
     },
     "suspected_sample_contamination": {
       "name": "suspected_sample_contamination",
@@ -2225,11 +2213,7 @@
       "range": "string",
       "required": true,
       "multivalued": true,
-      "structured_pattern": {
-        "syntax": "^{PMID}|{DOI}|{URL}|{text}$",
-        "interpolated": true,
-        "partial_match": false
-      }
+      "pattern": "^(PMID:\\d+|https:\\/\\/doi\\.org\\/10\\.\\d{2,9}/.*|https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*))$"
     },
     "measurement_method": {
       "name": "measurement_method",
@@ -2871,11 +2855,7 @@
           "range": "string",
           "required": true,
           "multivalued": false,
-          "structured_pattern": {
-            "syntax": "^{termID}$",
-            "interpolated": true,
-            "partial_match": false
-          }
+          "pattern": "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
         },
         "sample_taxon_id": {
           "name": "sample_taxon_id",
@@ -2903,11 +2883,7 @@
           "range": "string",
           "required": true,
           "multivalued": true,
-          "structured_pattern": {
-            "syntax": "^{termID}$",
-            "interpolated": true,
-            "partial_match": false
-          }
+          "pattern": "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
         },
         "sample_taxon_id_confidence": {
           "name": "sample_taxon_id_confidence",
@@ -2998,11 +2974,7 @@
           "required": false,
           "recommended": true,
           "multivalued": false,
-          "structured_pattern": {
-            "syntax": "^{termID}$",
-            "interpolated": true,
-            "partial_match": false
-          }
+          "pattern": "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
         },
         "suspected_sample_contamination": {
           "name": "suspected_sample_contamination",
@@ -3271,11 +3243,7 @@
           "range": "string",
           "required": true,
           "multivalued": true,
-          "structured_pattern": {
-            "syntax": "^{PMID}|{DOI}|{URL}|{text}$",
-            "interpolated": true,
-            "partial_match": false
-          }
+          "pattern": "^(PMID:\\d+|https:\\/\\/doi\\.org\\/10\\.\\d{2,9}/.*|https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*))$"
         },
         "measurement_method": {
           "name": "measurement_method",
@@ -3704,24 +3672,6 @@
         }
       },
       "tree_root": true
-    }
-  },
-  "settings": {
-    "DOI": {
-      "setting_key": "DOI",
-      "setting_value": "^https:\\/\\/doi\\.org\\/10.\\d{2,9}/.*$"
-    },
-    "PMID": {
-      "setting_key": "PMID",
-      "setting_value": "^PMID:\\d+$"
-    },
-    "URL": {
-      "setting_key": "URL",
-      "setting_value": "^https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)$"
-    },
-    "termID": {
-      "setting_key": "termID",
-      "setting_value": "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
     }
   },
   "@type": "SchemaDefinition"
