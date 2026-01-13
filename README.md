@@ -8,6 +8,16 @@ Watch Rhiannon Cameron and Damion Dooley describe this application on [YouTube](
 |---|---|---|
 |49+|34+|12+|
 
+## `miaard` TL;DR
+
+To **test** DataHarmonizer against a version of the `miaard` schema:
+
+1. Clone this repository
+2. Make sure you have `yarn` and `linkml` installed
+3. Download your new schema version to `web/templates/miaard`
+4. Run `python ../../../script/linkml.py -i c14.yaml` in `web/templates/miaard` to generate the `schema.json`
+5. Run `yarn dev` to see a locally hosted test version
+
 ## Pathogen Genomics Templates
 
 Note that the **Pathogen Genomics Package** of DataHarmonizer templates, which includes Covid-19 and Monkeypox, is available now as a simpler stand-alone zip file at [https://github.com/cidgoh/pathogen-genomics-package](https://github.com/cidgoh/pathogen-genomics-package). This version does not require the use of the developer environment and can be run simply by loading the `index.html` or `main.html` files in your local web browser.
