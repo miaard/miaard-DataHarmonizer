@@ -683,11 +683,15 @@ enums:
       CRDS:
         description: Cavity Ring-Down Spectroscopy
 
-settings:
-  DOI: ^https:\/\/doi\.org\/10.\d{2,9}/.*$
-  PMID: ^PMID:\d+$
-  URL: ^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$
-  termID: "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
+# STRUCTURED PATTERNS
+## syntax: ^{PMID}|{DOI}|{URL}|{text}$: ^(PMID:\d+|https:\/\/doi\.org\/10\.\d{2,9}/.*|https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*))$
+## syntax: ^{termID}$: "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
+
+#settings:
+#  DOI: ^https:\/\/doi\.org\/10.\d{2,9}/.*$
+#  PMID: ^PMID:\d+$
+#  URL: ^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$
+#  termID: "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
 
 classes:
   RadiocarbonDate:
@@ -883,10 +887,7 @@ slots:
     slot_uri: c14:000009
     multivalued: false
     range: string
-    structured_pattern:
-      syntax: ^{termID}$
-      interpolated: true
-      partial_match: false
+    pattern: "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
     required: true
     slot_group: sample
   sample_taxon_id:
@@ -902,10 +903,7 @@ slots:
     slot_uri: c14:000010
     multivalued: true
     range: string
-    structured_pattern:
-      syntax: ^{termID}$
-      interpolated: true
-      partial_match: false
+    pattern: "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
     required: true
     slot_group: sample
   sample_taxon_id_confidence:
@@ -952,10 +950,7 @@ slots:
     slot_uri: c14:000013
     multivalued: false
     range: string
-    structured_pattern:
-      syntax: ^{termID}$
-      interpolated: true
-      partial_match: false
+    pattern: "[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+"
     required: false
     recommended: true
     slot_group: sample
@@ -1097,10 +1092,7 @@ slots:
     slot_uri: c14:000022
     multivalued: true
     range: string
-    structured_pattern:
-      syntax: ^{PMID}|{DOI}|{URL}|{text}$
-      interpolated: true
-      partial_match: false
+    pattern: "^(PMID:\d+|https:\/\/doi\.org\/10\.\d{2,9}/.*|https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*))$"
     required: true
     slot_group: method
   measurement_method:
