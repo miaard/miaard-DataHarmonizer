@@ -8,6 +8,30 @@
         "name": "RadiocarbonDate",
         "display": true
       },
+      "ConventionalAgeRadiocarbonDateProteinaceousSample": {
+        "name": "ConventionalAgeRadiocarbonDateProteinaceousSample",
+        "display": true
+      },
+      "ConventionalAgeRadiocarbonDateCarbonateSample": {
+        "name": "ConventionalAgeRadiocarbonDateCarbonateSample",
+        "display": true
+      },
+      "F14CRadiocarbonDateProteinaceousSample": {
+        "name": "F14CRadiocarbonDateProteinaceousSample",
+        "display": true
+      },
+      "F14CRadiocarbonDateCarbonateSample": {
+        "name": "F14CRadiocarbonDateCarbonateSample",
+        "display": true
+      },
+      "RadiocarbonDateProteinaceousSample": {
+        "name": "RadiocarbonDateProteinaceousSample",
+        "display": true
+      },
+      "RadiocarbonDateCarbonateSample": {
+        "name": "RadiocarbonDateCarbonateSample",
+        "display": true
+      },
       "RadiocarbonDateCollection": {
         "name": "RadiocarbonDateCollection",
         "display": false
