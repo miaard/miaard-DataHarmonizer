@@ -26,7 +26,7 @@ To **test** DataHarmonizer against a version of the `miaard` schema.
     wget https://github.com/miaard/miaard-schema/raw/refs/heads/main/src/c14/schema/enums/{delta13c_measurement_methods,lab_codes,pretreatment_methods,radiocarbon_measurement_methods}.yaml -P enums/
     ```
 
-6. Run `python ../../../script/linkml.py -i c14.yaml` to generate the `schema.json`
+6. Run `python ../../../script/linkml.py -i schema.yaml` to generate the `schema.json`
 7. If necessary, update `web/templates/menu.json` to add any new combinations
 8. Run `yarn dev` to see a locally hosted test version
    - Check all combinations of core + modules work are expected
