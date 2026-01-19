@@ -15,11 +15,12 @@ To **test** DataHarmonizer against a version of the `miaard` schema.
 1. (If not already) Clone this repository
 2. (If not already) Make sure you have `yarn` and `linkml` installed in your environment
 3. Change into the directory `cd web/templates/miaard`
-4. Remove old schema files if they exist `rm c14.yaml enums/*.yaml`
+4. Remove old schema files if they exist `rm schema.yaml enums/*.yaml`
 5. Download all relevant schema files (both core and modules)
 
     ```bash
-    wget https://github.com/miaard/miaard-schema/raw/refs/heads/main/src/c14/schema/c14.yaml
+    ## Note: must be renamed to `schema.yaml` for DH to recognize during build!
+    wget https://github.com/miaard/miaard-schema/raw/refs/heads/main/src/c14/schema/c14.yaml -O schema.yaml
 
     ## Make sure to update list if new enums added!
     wget https://github.com/miaard/miaard-schema/raw/refs/heads/main/src/c14/schema/enums/{delta13c_measurement_methods,lab_codes,pretreatment_methods,radiocarbon_measurement_methods}.yaml -P enums/
@@ -34,6 +35,9 @@ To **test** DataHarmonizer against a version of the `miaard` schema.
 10. Change to root of the repository `cd ../../../`
 11. Replace the contents of `docs/` with `web/dist/` folder `rm -r docs/ && cp -r web/dist/ docs/`
 12. Commit and push changes to a new branch and open a PR for review
+
+> [!WARNING]
+> Make sure the base: is MIAARD and not the upstream DataHarmonizer repository!
 
 ## Pathogen Genomics Templates
 
