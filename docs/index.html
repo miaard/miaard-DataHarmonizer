@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataHarmonizer</title>
+    <!--Ignore script 404 on dev server; this external import used in prod-->
+    <script src="dist-schemas/schemas.js"></script>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        font-family: 'Albert Sans';
+      "
+    >
+      <a href="https://miaard.github.io/miaard-schema/"
+        ><img
+          style="padding-right: 10px; height: 80px"
+          src="https://raw.githubusercontent.com/miaard/miaard-DataHarmonizer/refs/heads/master/assets/miaard_logotype_light.png"
+      /></a>
+      <div>
+        <h3 style="margin-top: 5px; margin-bottom: 5px">
+          <a href="https://miaard.github.io/miaard-schema/"
+            >MIaaRD Testing Interface</a
+          >
+        </h3>
+        <p style="margin-top: 5px; margin-bottom: 5px">
+          <i
+            >Powered by
+            <a href="https://github.com/cidgoh/DataHarmonizer">DataHarmonizer</a
+            >.</i
+          >
+          MIaaRD version: X.X.X
+        </p>
+        <p></p>
+        <p style="margin-top: 5px; margin-bottom: 5px">
+          <b>Legend:</b>
+          <mark style="background-color: yellow">Required</mark>
+          <mark style="background-color: plum">Recommended</mark>
+          <mark style="background-color: lightgrey">Optional</mark>.
+          <b>To start:</b> Use 'Template' to select the most suitable
+          determination type. <b>Help:</b> Press the '?' icon on the right of
+          the toolbard for metadata term definitions.
+        </p>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row mt-3">
+        <div class="col">
+          <div id="data-harmonizer-toolbar"></div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col">
+          <ul
+            id="data-harmonizer-tabs"
+            class="nav nav-tabs"
+            id="myTab"
+            role="tablist"
+          ></ul>
+          <div id="data-harmonizer-grid" class="tab-content"></div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col col-md-6">
+          <div id="data-harmonizer-footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
